@@ -1,27 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
   <head>
-    <title>Address Book</title>
+    <title>Contact List</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
 	<div class="container">
+		<div class="row label-inverse">
+			<div class="span6">
+				<h4><p class="muted">Contact List</p></h4>
+			</div>
+			<div class="span6">
+				<h5 class="pull-right"> <a href="ContactList.html" id="addContactTop">Add Contact</a></h5>
+			</div>
+		</div>
 		<div class="row">
-			<div class="span12">
 			<table class="table table-striped">
-				<tr class="info">
-					<td>
-						<h4><p class="muted">Contact List</p></h4>
-					</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-						<h5> <a href="addressBook.html" id="addContactTop">Add Contact</a></h5>
-					</td>
-				</tr>
 				<tr>
 					<td>
 						<strong>#</strong>
@@ -59,7 +54,7 @@
 						adamian.artem@gmail.com
 					</td>
 					<td>
-						<a href="addressBook.html" id="remove"><i class="icon-remove"></i></a>
+						<a href="ContactList.html" id="remove"><i class="icon-remove"></i></a>
 					</td>
 				</tr>
 				
@@ -80,7 +75,7 @@
 						gosha.artem@gmail.com
 					</td>
 					<td>
-						<a href="addressBook.html"><i class="icon-remove"></i></a>
+						<a href="ContactList.html"><i class="icon-remove"></i></a>
 					</td>
 				</tr>
 				
@@ -101,26 +96,23 @@
 						star.wars@gmail.com
 					</td>
 					<td>
-						<a href="addressBook.html"><i class="icon-remove"></i></a>
-					</td>
-				</tr>
-				
-				<tr class="info">
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>
-						<h5> <a href="addressBook.html" id="addContactDown">Add Contact</a></h5>
+						<a href="ContactList.html"><i class="icon-remove"></i></a>
 					</td>
 				</tr>
 			</table>
+		</div>
+		
+		<div class="row label-inverse">
+			<div class="span6">
+				<h4><p class="muted">Contact List</p></h4>
+			</div>
+			<div class="span6">
+				<h5 class="pull-right"> <a href="ContactList.html" id="addContactDown">Add Contact</a></h5>
 			</div>
 		</div>
 	</div>
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/addressBook.js"></script>
+	<script type="text/javascript" src="js/ContactList.js"></script>
   </body>
 </html>
