@@ -1,5 +1,7 @@
 ﻿$(document).ready(function()
 {
+	$('#myModal').modal({show: false});
+
 	$("#addContactTop").click(function(){
 		alert("добавил");
 	});
