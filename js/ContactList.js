@@ -1,6 +1,6 @@
 ﻿$(document).ready(function()
 {
-	$('#myModal').modal({show: false});
+	$('#myModal').modal({show: false});//hide modal window, when the page opens
 
 	$("#addContactTop").click(function(){
 		alert("добавил");
