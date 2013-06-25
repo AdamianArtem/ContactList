@@ -1,8 +1,10 @@
 ﻿$(document).ready(function()
 {
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
-
-	$("#addContactTop").click(function(){
+	$("#AddContactBotton").click(function(){
+		alert("you are clicked");
+	});
+	/*$("#addContactTop").click(function(){
 		alert("добавил");
 	});
 	
@@ -11,8 +13,8 @@
 	});
 	
 	$("#remove").click(function(){
-		alert("удалил");арапорлодолж
-	});
+		alert("удалил");
+	});*/
 	
 	
 });
