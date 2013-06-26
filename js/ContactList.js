@@ -1,12 +1,18 @@
 ﻿$(document).ready(function()
 {
-	function createRecord() {
+	/**
+		takes id, this id for number of record and for number of remove button
+	**/
+	function createRecord(id) {
 		var firstName=$("#inputFirstName").val();
-		$("#tableId").append("<tr id='trId-1'><td>"+firstName+"</td></tr>");
+		//$("#inputFirstName").empty();
+		$("#tableId").append("<tr><td>"+firstName+"</td></tr>");
 	}
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
+	
 	$("#AddContactBotton").click(function(){
 		createRecord();
+		$("#inputFirstName").empty();
 		//alert("you are clicked");
 	});
 });
