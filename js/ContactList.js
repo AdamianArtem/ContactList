@@ -1,20 +1,12 @@
 ﻿$(document).ready(function()
 {
+	function createRecord() {
+		var firstName=$("#inputFirstName").val();
+		$("#tableId").append("<tr id='trId-1'><td>"+firstName+"</td></tr>");
+	}
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
 	$("#AddContactBotton").click(function(){
-		alert("you are clicked");
+		createRecord();
+		//alert("you are clicked");
 	});
-	/*$("#addContactTop").click(function(){
-		alert("добавил");
-	});
-	
-	$("#addContactDown").click(function(){
-		alert("удалил");
-	});
-	
-	$("#remove").click(function(){
-		alert("удалил");
-	});*/
-	
-	
 });
