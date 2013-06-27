@@ -23,8 +23,9 @@
 		//$("#inputFirstName").empty();
 		//alert("you are clicked");
 		$("#remove"+id).click(function(){
-			var idS=$(this).attr("id");
-			$("#remove"+idS).remove();
+			alert($(this).attr("id"));
+			//var idS=$(this).attr("id");
+			//$("#remove"+idS).remove();
 	});
 	});
 });
