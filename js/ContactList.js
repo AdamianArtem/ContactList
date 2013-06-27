@@ -22,10 +22,7 @@
 		id++;
 		createRecord(id);
 		
-		$("input[name='firstName']").val("")
-		$("input[name='secondName']").val("");
-		$("input[name='phoneNumber']").val("");
-		$("input[name='email']").val("");
+		$("input").val("");
 		
 		$("td a").click(function(){
 			$(this).parent().parent().remove();
