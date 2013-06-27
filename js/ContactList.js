@@ -18,11 +18,17 @@
 	var id=0;//count record
 	
 	$("#AddContactBotton").click(function(){
+		
 		id++;
 		createRecord(id);
 		
+		$("input[name='firstName']").val("")
+		$("input[name='secondName']").val("");
+		$("input[name='phoneNumber']").val("");
+		$("input[name='email']").val("");
+		
 		$("td a").click(function(){
-			$(this).parent().parent().remove();//var removeId=$(this).attr("id");// removeId stores the id remove button
+			$(this).parent().parent().remove();
 		});
 	});
 });
