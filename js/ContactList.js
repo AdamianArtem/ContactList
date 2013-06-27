@@ -22,7 +22,7 @@
 		id++;
 		createRecord(id);
 		
-		$("input").val("");
+		$(".controls input").val("");
 		
 		$("td a").click(function(){
 			$(this).parent().parent().remove();
