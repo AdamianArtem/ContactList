@@ -24,8 +24,9 @@
 		
 		$("#myModal input").val("");
 		
-		$("td a").click(function(){
+		$("td a:last").click(function(){
 			$(this).parent().parent().remove();
+			alert("1");
 		});
 	});
 });
