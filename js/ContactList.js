@@ -13,8 +13,8 @@
 		
 		$("#tableId").append("<tr id='record"+id+"'><td>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a  id='"+id+"'><i class='icon-remove'></i></a></td></tr>");
 	}
-	$('#myModal').modal({show: false});//hide modal window, when the page opens
 	
+	$('#myModal').modal({show: false});//hide modal window, when the page opens
 	var id=0;//count remove buttons
 	
 	$("#AddContactBotton").click(function(){
@@ -23,8 +23,7 @@
 		
 		$("#"+id).click(function(){
 			var removeId=$(this).attr("id");// removeId stores the id remove button
-			
 			$("#record"+removeId).remove();
-	});
+		});
 	});
 });
