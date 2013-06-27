@@ -6,10 +6,10 @@
 		record consists of: First Name, Second Name, Phone Number, Email and remove botton
 	**/
 	function createRecord(id) {
-		var firstName=$("input[placeholder='First Name']").val();
-		var secondName=$("input[placeholder='Second Name']").val();
-		var phoneNumber=$("input[placeholder='Phone Number']").val();
-		var email=$("input[placeholder='Email']").val();
+		var firstName=$("input[name='firstName']").val();
+		var secondName=$("input[name='secondName']").val();
+		var phoneNumber=$("input[name='phoneNumber']").val();
+		var email=$("input[name='email']").val();
 		
 		$("#tableId").append("<tr><td>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a><i class='icon-remove'></i></a></td></tr>");
 	}
@@ -22,8 +22,7 @@
 		createRecord(id);
 		
 		$("td a").click(function(){
-			var tr=$(this).parent().parent();//var removeId=$(this).attr("id");// removeId stores the id remove button
-			$(tr).remove();
+			$(this).parent().parent().remove();//var removeId=$(this).attr("id");// removeId stores the id remove button
 		});
 	});
 });
