@@ -11,21 +11,20 @@
 		var phoneNumber=$("#inputPhoneNumber").val();
 		var email=$("#inputEmail").val();
 		
-		$("#tableId").append("<tr id='record"+id+"'><td>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a  id='remove"+id+"'><i class='icon-remove'></i></a></td></tr>");
+		$("#tableId").append("<tr id='record"+id+"'><td>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a  id='"+id+"'><i class='icon-remove'></i></a></td></tr>");
 	}
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
 	
-	var id=0;//record count and remove buttons
+	var id=0;//count remove buttons
 	
 	$("#AddContactBotton").click(function(){
 		id++;
 		createRecord(id);
-		//$("#inputFirstName").empty();
-		//alert("you are clicked");
-		$("#remove"+id).click(function(){
-			alert($(this).attr("id"));
-			//var idS=$(this).attr("id");
-			//$("#remove"+idS).remove();
+		
+		$("#"+id).click(function(){
+			var removeId=$(this).attr("id");// removeId stores the id remove button
+			
+			$("#record"+removeId).remove();
 	});
 	});
 });
