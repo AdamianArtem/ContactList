@@ -21,7 +21,6 @@
 		
 		id++;
 		createRecord(id);
-		
 		$("#myModal input").val("");
 		
 		$(".removeButton:last").click(function(){
@@ -31,11 +30,7 @@
 			// numeration: correctly  numbers when removing
 			$("#contactTable .rowIndex").each(function(i) {
 				i++;
-				if(i<id) {
-					$(this).text(i);
-				} else {
-					return;
-				}
+				$(this).text(i);
 			});
 			id--;  
 			////////////////////
