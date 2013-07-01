@@ -16,8 +16,6 @@
 		
 	}
 	
-	//$('#myModal').modal({show: false});//hide modal window, when the page opens
-	
 	$("#AddContactBotton").click(function(){
 		createRecord();
 		numerateRows();
