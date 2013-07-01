@@ -29,8 +29,7 @@
 			
 			// numeration: correctly  numbers when removing
 			$("#contactTable .rowIndex").each(function(i) {
-				i++;
-				$(this).text(i);
+				$(this).text(i+1);
 			});
 			id--;  
 			////////////////////
