@@ -11,7 +11,7 @@
 		var phoneNumber=$("input[name='phoneNumber']").val();
 		var email=$("input[name='email']").val();
 		
-		$("#tableId").append("<tr><td id='"+id+"'>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a class='removeButton'><i class='icon-remove'></i></a></td></tr>");
+		$("#tableId").append("<tr><td class='id'>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a class='removeButton'><i class='icon-remove'></i></a></td></tr>");
 	}
 	
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
@@ -27,14 +27,16 @@
 		$(".removeButton:last").click(function(){
 			
 			$(this).parent().parent().remove();
-			var number=parseInt($(this).parent().parent().text());
-			//alert(parseInt($(this).parent().parent().text()));
-			for(var record=number;record<id;record++) {
-				$("#"+(record+1)).text(record);
-				//alert($("#"+(r+1)).text());
-			}
-			id--;
-			//$("#"+4).text(record);
+			var i=1;
+			
+			$(".id").each(function() {
+				if(i<id) {
+					$(this).text(i);
+					i++;
+				} else {
+					return;
+				}
+			});
 		});
 	});
 	
