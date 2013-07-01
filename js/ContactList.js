@@ -27,6 +27,8 @@
 		$(".removeButton:last").click(function(){
 			
 			$(this).parent().parent().remove();
+			
+			// numeration: correctly  numbers when removing
 			$("#contactTable .rowIndex").each(function(i) {
 				i++;
 				if(i<id) {
@@ -36,6 +38,7 @@
 				}
 			});
 			id--;  
+			////////////////////
 		});
 	});
 	
