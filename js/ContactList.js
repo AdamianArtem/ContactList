@@ -22,11 +22,11 @@
 		createRecord();
 		numerateRows();
 		$("#myModal input").val("");
-		
-		$(".removeButton:last").click(function(){
-			$(this).parent().parent().remove();
-			numerateRows();
-		});
+	});
+	
+	$(".removeButton").live("click",function(){
+		$(this).parent().parent().remove();
+		numerateRows();
 	});
 	
 	
