@@ -16,20 +16,21 @@
 		numbering row in table whith id="contactTable"
 		return number in first column
 	**/
-	function numeration() {
+	function numerateRows() {
 		$("#contactTable .rowIndex").each(function(i) {
 				$(this).text(i+1);
 		});
+		
 	}
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
 	$("#AddContactBotton").click(function(){
 		createRecord();
-		numeration();
+		numerateRows();
 		$("#myModal input").val("");
 		
 		$(".removeButton:last").click(function(){
 			$(this).parent().parent().remove();
-			numeration();
+			numerateRows();
 		});
 	});
 	
