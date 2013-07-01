@@ -28,6 +28,7 @@
 			
 			$(this).parent().parent().remove();
 			$("#contactTable .rowIndex").each(function(i) {
+				i++;
 				if(i<id) {
 					$(this).text(i);
 				} else {
