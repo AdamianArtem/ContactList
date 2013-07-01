@@ -11,7 +11,7 @@
 		var phoneNumber=$("input[name='phoneNumber']").val();
 		var email=$("input[name='email']").val();
 		
-		$("#tableId").append("<tr><td class='id'>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a class='removeButton'><i class='icon-remove'></i></a></td></tr>");
+		$("#contactTable").append("<tr><td class='rowIndex'>"+id+"</td><td>"+firstName+"</td></td><td>"+secondName+"</td></td><td>"+phoneNumber+"</td></td><td>"+email+"</td><td><a class='removeButton'><i class='icon-remove'></i></a></td></tr>");
 	}
 	
 	$('#myModal').modal({show: false});//hide modal window, when the page opens
@@ -27,12 +27,9 @@
 		$(".removeButton:last").click(function(){
 			
 			$(this).parent().parent().remove();
-			var i=1;
-			
-			$(".id").each(function() {
+			$("#contactTable .rowIndex").each(function(i) {
 				if(i<id) {
 					$(this).text(i);
-					i++;
 				} else {
 					return;
 				}
